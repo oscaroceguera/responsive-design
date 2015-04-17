@@ -9,11 +9,34 @@
 </head>
 <body>
 	<section class="Canvas">
-		<div class="Canvas-menu verde_A">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium consequatur voluptates quae ad, minus repellendus cum odit rerum qui, quaerat non consequuntur tempore. Placeat nemo ducimus itaque optio? Quisquam, ea?
-		</div>
+		<header class="Header">
+			<h1 class="Header-logo">Off canvas</h1>
+			<button class="Header-button is-active" id="showMenu">Mostrar menu</button>
+			<button class="Header-button" id="hideMenu">Ocultar menu</button>
+			<ul class="MainMenu" id="menu">
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Cursos
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Conferencias
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Eventos
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Contacto
+					</a>
+				</li>
+			</ul>
+		</header>
 		<div class="Canvas-main verde_B">
-			<h1>Off canvas</h1>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat commodi inventore debitis quibusdam maiores eos vel dolore, nihil fuga consequuntur magnam cumque saepe quod deleniti recusandae cupiditate totam voluptatem.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis error facere ipsa molestias necessitatibus consequuntur non expedita accusantium, saepe, magni soluta fuga eveniet dignissimos maiores repudiandae quod praesentium. Accusantium.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam hic assumenda deleniti a alias libero voluptate incidunt, amet omnis, id sunt harum quod similique odit nesciunt aliquam. Tempora, consequatur, mollitia!
@@ -22,5 +45,48 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ab totam, quam quisquam. Fugiat vel eius nihil, voluptates quis accusantium, adipisci culpa magnam incidunt, voluptate aperiam reprehenderit ex mollitia autem.
 		</div>
 	</section>
+
+	<script>
+		var $buttonShowMenu = document.getElementById('showMenu');
+		var $buttonHideMenu = document.getElementById('hideMenu');
+		var $menu = document.getElementById('menu');
+
+		var showMenu = function(){
+			$buttonShowMenu.classList.remove('is-active');
+			$buttonHideMenu.classList.add('is-active');
+			$menu.classList.add('is-active');
+		}
+
+		var hideMenu = function(){
+			$buttonShowMenu.classList.add('is-active');
+			$buttonHideMenu.classList.remove('is-active');
+			$menu.classList.remove('is-active');
+		}
+
+		$buttonShowMenu.addEventListener("click",showMenu);
+
+		$buttonHideMenu.addEventListener("click",hideMenu);
+
+			
+	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
