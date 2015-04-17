@@ -1,0 +1,1 @@
+.Canvas{position:relative;overflow:hidden;}.Canvas-main{padding:10px 0}.Canvas-menu{width:200px;position:absolute;left:-200px;top:0;-webkit-transition:1s;}.Canvas-menu.is-active{left:0}.Canvas-sidebar{position:absolute;width:200px;right:-200px;top:0;-webkit-transition:1s;}.Canvas-sidebar.is-active{right:0}
