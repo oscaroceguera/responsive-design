@@ -46,10 +46,21 @@
 		</div>
 	</section>
 
+	<script src="hammer.js"></script>
 	<script>
+
 		var $buttonShowMenu = document.getElementById('showMenu');
 		var $buttonHideMenu = document.getElementById('hideMenu');
 		var $menu = document.getElementById('menu');
+
+		//HAMMER
+		var $body = document.querySelector('body');
+
+		var body = new Hammer($body);
+
+		// body.on('tap', function(){
+		// 	console.log('Esto es un Tap');
+		// });
 
 		var showMenu = function(){
 			$buttonShowMenu.classList.remove('is-active');
@@ -65,9 +76,12 @@
 
 		$buttonShowMenu.addEventListener("click",showMenu);
 
-		$buttonHideMenu.addEventListener("click",hideMenu);
+		$buttonHideMenu.addEventListener("click",hideMenu);	
 
-			
+		body.on('panright', showMenu);
+
+		body.on('panleft', hideMenu);
+
 	</script>
 </body>
 </html>
